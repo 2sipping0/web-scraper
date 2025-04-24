@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.scraper-form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.results {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.results h2 {
+    margin-top: 0;
+    color: #333;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+#status {
+    margin: 15px 0;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.loading {
+    background-color: #e6f7ff;
+    color: #0066cc;
+}
+
+.success {
+    background-color: #e6ffec;
+    color: #00994d;
+}
+
+.error {
+    background-color: #ffebee;
+    color: #c62828;
+}
+
+#result-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#result-list li {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+#result-list li:last-child {
+    border-bottom: none;
+}
+
+.empty-results {
+    color: #666;
+    font-style: italic;
+    text-align: center;
+    padding: 20px;
+}
+
+.download-btn {
+    background-color: #2196F3;
+    margin-top: 15px;
+}
+
+.download-btn:hover {
+    background-color: #0b7dda;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+}

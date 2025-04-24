@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Web Scraper</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Web Scraper Tool</h1>
+    
+    <div class="scraper-form">
+        <div class="form-group">
+            <label for="url">Website URL to Scrape:</label>
+            <input type="url" id="url" placeholder="https://example.com" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="scrape-type">What to scrape:</label>
+            <select id="scrape-type" onchange="toggleSelectorField()">
+                <option value="elements">HTML Elements</option>
+                <option value="emails">Email Addresses</option>
+            </select>
+        </div>
+        
+        <div class="form-group" id="selector-field">
+            <label for="selector">CSS Selector:</label>
+            <input type="text" id="selector" placeholder="h2, .article-title, #main-content p" required>
+        </div>
+        
+        <div class="form-group" id="selector-preset-field">
+            <label for="selector-preset">Common Selector Presets:</label>
+            <select id="selector-preset" onchange="applySelectorPreset()">
+                <option value="">-- Select a preset --</option>
+                <option value="h1">Headings (h1)</option>
+                <option value="h2">Subheadings (h2)</option>
+                <option value="p">Paragraphs (p)</option>
+                <option value="a">Links (a)</option>
+                <option value="img">Images (img)</option>
+                <option value=".title">Elements with class "title"</option>
+                <option value="#content">Element with ID "content"</option>
+            </select>
+        </div>
+        
+        <button onclick="startScraping()">Start Scraping</button>
+    </div>
+    
+    <div class="results">
+        <h2>Results</h2>
+        <div id="status" style="display: none;"></div>
+        
+        <div id="results-container">
+            <p class="empty-results">No results yet. Start scraping to see data.</p>
+            <ul id="result-list" style="display: none;"></ul>
+        </div>
+        
+        <button id="download-btn" class="download-btn" style="display: none;" onclick="downloadResults()">Download Results as JSON</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
