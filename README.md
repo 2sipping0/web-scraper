@@ -21,7 +21,7 @@ A simple and powerful web scraping tool built with Node.js, Express, Axios, and 
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/your-username/web-scraper.git
+   git clone https://github.com/2sipping0/web-scraper.git
    ```
 
 2. Navigate to the project directory:
